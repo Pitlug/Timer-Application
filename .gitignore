@@ -1,3 +1,11 @@
 /Main.class
 /Stopwatch.class
 /Stopwatch$1.class
+/TicTacToeEpic.class
+/TicTacToeEpic$clearBoard.class
+/Square2.class
+/Square2$SquareListener.class
+/Life2.class
+/Life2$ClearBoard.class
+/Life2$MakeMove.class
+/Life2$RunGame.class

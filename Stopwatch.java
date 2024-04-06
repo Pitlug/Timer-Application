@@ -62,7 +62,7 @@ public class Stopwatch implements ActionListener{
 		frame.add(timeLabel);
 		
 		frame.add(timeLabel);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		frame.setSize(400,600);
 		frame.setLayout(null);
 		frame.setVisible(true); //Always set last
