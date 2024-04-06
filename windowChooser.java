@@ -7,7 +7,7 @@ import java.awt.color.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class windowChooser implements ActionListener{
+public class windowChooser{
 	JFrame frame = new JFrame();
 	JPanel title_panel = new JPanel();
 	JPanel button_panel = new JPanel();
@@ -35,14 +35,29 @@ public class windowChooser implements ActionListener{
 		TicTacToe.setBackground(Color.BLUE);
 		TicTacToe.setFont(new Font("Ink Free",Font.BOLD,85));
 		TicTacToe.setText("Tic Tac Toe");
+		TicTacToe.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TicTacToeEpic tictactoe = new TicTacToeEpic();
+			}
+		} );
 		
 		stopwatch.setBackground(Color.RED);
 		stopwatch.setFont(new Font("Ink Free",Font.BOLD,85));
 		stopwatch.setText("Stopwatch");
+		stopwatch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Stopwatch stopwatch = new Stopwatch();
+			}
+		} );
 		
 		life.setBackground(Color.GREEN);
 		life.setFont(new Font("Ink Free",Font.BOLD,65));
 		life.setText("Conway's Game of Life");
+		life.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Life2 life = new Life2(38);
+			}
+		} );
 		
 		title_panel.setLayout(new BorderLayout());
 		title_panel.setBounds(0,0,800,100);
@@ -56,18 +71,5 @@ public class windowChooser implements ActionListener{
 		title_panel.add(textfield);
 		frame.add(title_panel, BorderLayout.NORTH);
 		frame.add(button_panel);
-	}
-	
-	
-
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == TicTacToe) {
-			TicTacToeEpic tictactoe = new TicTacToeEpic();
-        } else if (e.getSource() == stopwatch) {
-        	Stopwatch stopwatch = new Stopwatch();
-        } else if (e.getSource() == life) {
-        	Life2 life = new Life2(38);
-        }
-		
 	}
 }
