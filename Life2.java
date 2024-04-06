@@ -17,7 +17,7 @@ public class Life2 extends JFrame{
 	public Life2(int size) {
 		int r,c;
 		setTitle("Game of Life");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(HIDE_ON_CLOSE);
 		setSize(size*25,size*25);
 		board = new Square2[size][size];
 		setLayout(new BorderLayout());
